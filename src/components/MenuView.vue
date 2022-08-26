@@ -7,14 +7,14 @@
     <div>
       <h4>쇼핑하기</h4>
       <ul class="mn-category clearfix">
-        <li><img :src="require('@/assets/images/ct-pig.svg')" alt="돼지"><p>돼지</p></li>
-        <li><img :src="require('@/assets/images/ct-cow.svg')" alt="소"><p>소</p></li>
-        <li><img :src="require('@/assets/images/ct-chicken.svg')" alt="닭"><p>닭</p></li>
-        <li><img :src="require('@/assets/images/ct-fish.svg')" alt="수산"><p>수산</p></li>
-        <li><img :src="require('@/assets/images/ct-mealkit.svg')" alt="밀키트"><p>밀키트</p></li>
-        <li><img :src="require('@/assets/images/ct-milk.svg')" alt="우유"><p>우유</p></li>
-        <li><img :src="require('@/assets/images/ct-egg.svg')" alt="달걀"><p>달걀</p></li>
-        <li><img :src="require('@/assets/images/ct-babymeal.svg')" alt="이유식"><p>이유식</p></li>
+        <li><img :src="require('@/assets/images/ct-pig.png')" alt="돼지"><p>돼지</p></li>
+        <li><img :src="require('@/assets/images/ct-cow.png')" alt="소"><p>소</p></li>
+        <li><img :src="require('@/assets/images/ct-chicken.png')" alt="닭"><p>닭</p></li>
+        <li><img :src="require('@/assets/images/ct-fish.png')" alt="수산"><p>수산</p></li>
+        <li><img :src="require('@/assets/images/ct-mealkit.png')" alt="밀키트"><p>밀키트</p></li>
+        <li><img :src="require('@/assets/images/ct-milk.png')" alt="우유"><p>우유</p></li>
+        <li><img :src="require('@/assets/images/ct-egg.png')" alt="달걀"><p>달걀</p></li>
+        <li><img :src="require('@/assets/images/ct-babymeal.png')" alt="이유식"><p>이유식</p></li>
       </ul>
     </div>
     <hr>
@@ -95,7 +95,7 @@
     width: 48px;
     height: 48px;
     font-size: 0;
-    background: url('@/assets/images/mn-cart.svg') no-repeat center;
+    background: url('@/assets/images/mn-cart.png') no-repeat center;
     background-size: contain;
   }
 
@@ -107,7 +107,7 @@
     width: 48px;
     height: 48px;
     font-size: 0;
-    background: url('@/assets/images/mn-close.svg') no-repeat center;
+    background: url('@/assets/images/mn-close.png') no-repeat center;
     background-size: contain;
   }
 

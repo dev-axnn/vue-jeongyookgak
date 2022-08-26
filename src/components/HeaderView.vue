@@ -94,7 +94,7 @@
     width: 129px;
     height: 96px;
     font-size: 0;
-    background: url('@/assets/images/logo.svg') no-repeat center;
+    background: url('@/assets/images/logo.png') no-repeat center;
     background-size: contain;
   }
 
@@ -157,7 +157,7 @@
     width: 48px;
     height: 48px;
     font-size: 0;
-    background: url('@/assets/images/icon-cart.svg') no-repeat center;
+    background: url('@/assets/images/icon-cart.png') no-repeat center;
     background-size: contain;
     float: right;
   }
@@ -171,7 +171,7 @@
     width: 48px;
     height: 48px;
     font-size: 0;
-    background: url('@/assets/images/icon-menu.svg') no-repeat center;
+    background: url('@/assets/images/icon-menu.png') no-repeat center;
     background-size: contain;
     float: right;
   }

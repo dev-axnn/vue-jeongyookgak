@@ -2,33 +2,43 @@
   <!-- event -->
     <section class="event">
       <div class="inner">
-        <div class="swiper-container event-left">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="$"><img src="images/event-left-1.png" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="$"><img src="images/event-left-2.png" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="$"><img src="images/event-left-3.png" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="$"><img src="images/event-left-4.png" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="$"><img src="images/event-left-5.png" alt=""></a>
-            </div>
-            <div class="swiper-slide">
-              <a href="$"><img src="images/event-left-6.png" alt=""></a>
-            </div>
-          </div>
+        <Swiper
+          :modules="modules"
+          :loop="true"
+          :navigation="{
+            nextEl: '.event-left-next',
+            prevEl: '.event-left-prev'
+          }"
+          :pagination="{
+            el: '.event-left-pg',
+            type: 'fraction'
+          }"
+          class="sw-visual event-left">
+          <swiper-slide class="swiper-slide">
+            <a href="#"><img src="@/assets/images/event-left-1.png" alt="상품 가격 변동에 대한 안내"></a>
+          </swiper-slide>
+          <swiper-slide class="swiper-slide">
+            <a href="#"><img src="@/assets/images/event-left-2.png" alt="이제 더 많은 지역에서 오전 주문, 오후 도착!"></a>
+          </swiper-slide>
+          <swiper-slide class="swiper-slide">
+            <a href="#"><img src="@/assets/images/event-left-3.png" alt="초신선, 그 두 번째 이야기 세상에 없던 초신선 수산물"></a>
+          </swiper-slide>
+          <swiper-slide class="swiper-slide">
+            <a href="#"><img src="@/assets/images/event-left-4.png" alt="정육각 앱 설치 하면 15% 할인 쿠폰 증정!"></a>
+          </swiper-slide>
+          <swiper-slide class="swiper-slide">
+            <a href="#"><img src="@/assets/images/event-left-5.png" alt="인스타그램 리뷰 작성 시 최대 7천원의 혜택"></a>
+          </swiper-slide>
+          <swiper-slide class="swiper-slide">
+            <a href="#"><img src="@/assets/images/event-left-6.png" alt="보관이 편리한 실리콘 이유식 큐브 증정"></a>
+          </swiper-slide>
           <div class="event-left-ctrl clearfix">
             <button class="event-left-prev"></button>
             <span class="event-left-pg"></span>
             <button class="event-left-next"></button>
           </div>
-        </div>
+        </Swiper>
+
         <div>
           <a href="#" class="event-right"></a>
         </div>
@@ -38,28 +48,21 @@
 </template>
 
 <script>
-  import { onMounted } from 'vue';
-  import $ from 'jquery';
+  import { Navigation, Pagination } from 'swiper';
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+  import 'swiper/css';
+  import 'swiper/css/navigation'
 
   export default {
+    components: { 
+      Swiper,
+      SwiperSlide
+    },
+
     setup(){
-      onMounted(() => {
-        // 이벤트슬라이드(swiper)
-        new Swiper('.event-left', {
-          loop: true,
-          speed: 500,
-          navigation: {
-            prevEl: '.event-left-prev',
-            nextEl: '.event-left-next'
-          },
-          pagination: {
-            el: '.event-left-pg',
-            type: 'fraction'
-          }
-        });
-      });
-      
-      return{};
+      return{
+        modules: [ Navigation, Pagination ]
+      };
     }
   }
 </script>
@@ -89,35 +92,11 @@
     top: 50%;
     transform: translateY(-50%);
     display: block;
+
   }
-  .event-left a img{
+  .swiper-slide a img{
     width: 100%;
     height: 30%;
-  }
-
-  .event-left-1 {
-    background: url('../images/event-left-1.png') no-repeat center;
-    background-size: cover;
-  }
-  .event-left-2 {
-    background: url('../images/event-left-2.png') no-repeat center;
-    background-size: cover;
-  }
-  .event-left-3 {
-    background: url('../images/event-left-3.png') no-repeat center;
-    background-size: cover;
-  }
-  .event-left-4 {
-    background: url('../images/event-left-4.png') no-repeat center;
-    background-size: cover;
-  }
-  .event-left-5 {
-    background: url('../images/event-left-5.png') no-repeat center;
-    background-size: cover;
-  }
-  .event-left-6 {
-    background: url('../images/event-left-6.png') no-repeat center;
-    background-size: cover;
   }
 
   .event-left-ctrl {
@@ -135,7 +114,7 @@
   .event-left-prev {
     width: 30%;
     height: 100%;
-    background: url('../images/event-arrow.svg') no-repeat 50% 40%;
+    background: url('@/assets/images/event-arrow.png') no-repeat 50% 40%;
     background-size: 55%;
     transform: rotate(180deg);
     border: 0;
@@ -152,7 +131,7 @@
     line-height: 30px;
     float: left;
   }
-
+  
   .swiper-pagination-current {
     font-weight: 800;
   }
@@ -160,7 +139,7 @@
   .event-left-next {
     width: 30%;
     height: 100%;
-    background: url('../images/event-arrow.svg') no-repeat center;
+    background: url('@/assets/images/event-arrow.png') no-repeat center;
     background-size: 55%;
     opacity: .3;
     border: 0;
@@ -175,7 +154,7 @@
     width: calc(100% / 2);
     height: 18vw;
     max-height: 176px;
-    background: url('../images/freshplan.9fe4775.png') no-repeat center;
+    background: url('@/assets/images/freshplan.9fe4775.png') no-repeat center;
     background-size: contain;
   }
 
@@ -226,7 +205,7 @@
       width: 90%;
       height: 30vw;
       max-height: 300px;
-      background: url('../images/freshplan.9fe4775_m.png') no-repeat center;
+      background: url('@/assets/images/freshplan.9fe4775_m.png') no-repeat center;
       background-size: 89%;
       margin-left: 5%;
     }
