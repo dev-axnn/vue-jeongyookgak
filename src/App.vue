@@ -1,4 +1,5 @@
 <template>
+  <ModalView/>
   <MenuView/>
   <div class="wrap">
     <HeaderView/>
@@ -11,6 +12,7 @@
   import { onMounted } from 'vue';
   import $ from 'jquery';
 
+  import ModalView from '@/components/ModalView.vue';
   import MenuView from '@/components/MenuView.vue';
   import HeaderView from '@/components/HeaderView.vue';
   import VisualView from '@/components/VisualView.vue';
@@ -18,6 +20,7 @@
 
   export default {
     components: { 
+      ModalView,
       MenuView,
       HeaderView,
       VisualView,
